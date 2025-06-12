@@ -72,21 +72,8 @@ class EmbedderFactory:
 
 class VectorStoreFactory:
     provider_to_class = {
-        "qdrant": "mem0.vector_stores.qdrant.Qdrant",
-        "chroma": "mem0.vector_stores.chroma.ChromaDB",
-        "pgvector": "mem0.vector_stores.pgvector.PGVector",
         "milvus": "mem0.vector_stores.milvus.MilvusDB",
-        "upstash_vector": "mem0.vector_stores.upstash_vector.UpstashVector",
-        "azure_ai_search": "mem0.vector_stores.azure_ai_search.AzureAISearch",
-        "pinecone": "mem0.vector_stores.pinecone.PineconeDB",
-        "redis": "mem0.vector_stores.redis.RedisDB",
-        "elasticsearch": "mem0.vector_stores.elasticsearch.ElasticsearchDB",
-        "vertex_ai_vector_search": "mem0.vector_stores.vertex_ai_vector_search.GoogleMatchingEngine",
         "opensearch": "mem0.vector_stores.opensearch.OpenSearchDB",
-        "supabase": "mem0.vector_stores.supabase.Supabase",
-        "weaviate": "mem0.vector_stores.weaviate.Weaviate",
-        "faiss": "mem0.vector_stores.faiss.FAISS",
-        "langchain": "mem0.vector_stores.langchain.Langchain",
     }
 
     @classmethod

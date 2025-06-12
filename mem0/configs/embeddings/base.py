@@ -37,6 +37,10 @@ class BaseEmbedderConfig(ABC):
         aws_access_key_id: Optional[str] = None,
         aws_secret_access_key: Optional[str] = None,
         aws_region: Optional[str] = "us-west-2",
+        # Volce specific
+        volce_api_key: Optional[str] = None,
+        volce_endpoint: Optional[str] = None,
+        volce_model: Optional[str] = None,
     ):
         """
         Initializes a configuration class instance for the Embeddings.
@@ -69,6 +73,12 @@ class BaseEmbedderConfig(ABC):
         :type memory_search_embedding_type: Optional[str], optional
         :param lmstudio_base_url: LM Studio base URL to be use, defaults to "http://localhost:1234/v1"
         :type lmstudio_base_url: Optional[str], optional
+        :param volce_api_key: Volce API key to be use, defaults to None
+        :type volce_api_key: Optional[str], optional
+        :param volce_endpoint: Volce endpoint to be use, defaults to None
+        :type volce_endpoint: Optional[str], optional
+        :param volce_model: Volce model to be use, defaults to None
+        :type volce_model: Optional[str], optional
         """
 
         self.model = model
@@ -101,3 +111,8 @@ class BaseEmbedderConfig(ABC):
         self.aws_access_key_id = aws_access_key_id
         self.aws_secret_access_key = aws_secret_access_key
         self.aws_region = aws_region
+
+        # Volce specific
+        self.volce_api_key = volce_api_key
+        self.volce_endpoint = volce_endpoint
+        self.volce_model = volce_model
