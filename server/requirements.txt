@@ -7,4 +7,3 @@ posthog
 backoff
 qdrant-client
 requests
-dotenv
